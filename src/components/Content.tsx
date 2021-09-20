@@ -17,10 +17,9 @@ interface MovieProps {
 
 interface ContentProps {
   selectedGenreId: number;
-  setSelectedGenreId: (val: number) => void;
 }
 
-export function Content({ selectedGenreId, setSelectedGenreId }: ContentProps) {
+export function Content({ selectedGenreId }: ContentProps) {
   const [movies, setMovies] = useState<MovieProps[]>([]);
 
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
